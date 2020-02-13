@@ -1,0 +1,44 @@
+---
+title: "my-HTML-vignette"
+output: 
+    bookdown::html_document2: 
+      base_format: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{name-of-my-vignette-file}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+bibliography: citations.bib
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+knitr::read_chunk("externalCode.R")
+```
+
+## Figure and cross-reference  
+```{r car-plot, fig.cap = "Distribution of Cars"}
+plot(cars, pch = 19)
+```
+
+We can see in Figure \@ref(fig:car-plot). 
+
+## Bibtex citation  
+[@he2018amc]
+
+
+## Reference the external file  
+```{r set-up-the-data}
+```
+
+```{r plot-the-data, echo=FALSE}
+
+```
+
+
+## Reference
